@@ -21,3 +21,90 @@ swiper {
   height: 340rpx;
   width: 100%;
 }
+.menu {
+  display: flex;
+ justify-content: space-around;
+ align-items: center;
+  
+}
+.menu image {
+  width: 128rpx;
+  height: 140rpx;
+  padding: 20px 0;
+}
+.floor {
+  margin-bottom: 20rpx;
+}
+.floor-title {
+  height: 60rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.title-image {
+  height: 60rpx;
+  width: 100%;
+  background-color: #f4f4f4
+}
+
+.floor-content {
+  display: flex;
+ 
+  
+}
+.floor-left {
+  width: 232rpx;
+  height: 386rpx;
+  margin: 0 15rpx;
+
+}
+.floor-left image {
+  width: 232rpx;
+  height: 386rpx;
+  
+
+}
+.floor-right {
+   display: flex;
+  flex-wrap: wrap;
+   
+}
+.floor-right image {
+  width: 233rpx;
+  height: 188rpx;
+}
+
+.floor-right image:nth-child(2n+1){
+  margin-right: 12rpx;
+}
+.floor-right image:nth-child(n+3){
+   margin-top: 15rpx;
+}
+.floor + .floor .floor-content .floor-right image {
+   width: 193rpx;
+}
+.floor + .floor .floor-content .floor-right image:nth-child(3n+1){
+  width: 273rpx;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 80rpx;
+  right:40rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.arrow {
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  transform: rotate(45deg)
+}

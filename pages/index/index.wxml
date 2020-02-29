@@ -1,19 +1,46 @@
-
 <view class="container">
-<!-- 搜索框部分 --> 
-   <navigator url="" class="search">
-   <view class="search-input">
-        <icon type="search" size="16"/>搜索
-   </view>
-</navigator>
-<!-- 轮播图部分 -->
-<swiper indicator-dots circular 
-indicator-color="rgba(255,255,255,.3)" 
-indicator-active-color="rgba(255,255,255,1)">
-        <block wx:for="{{banners}}" wx:key="index">
-          <swiper-item>
-               <image src="{{item.image_src}}" mode="aspectFill" class="image"></image>
-          </swiper-item>
-        </block>
-      </swiper>
+  <!-- 搜索框部分 -->
+  <navigator url="" class="search">
+    <view class="search-input">
+      <icon type="search" size="16" />搜索
+    </view>
+  </navigator>
+  <!-- 轮播图部分 -->
+  <swiper indicator-dots circular indicator-color="rgba(255,255,255,.3)" indicator-active-color="rgba(255,255,255,1)">
+    <block wx:for="{{banners}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.image_src}}" mode="aspectFill" class="image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 菜单栏部分 -->
+  <view class="menu">
+    <block wx:for="{{list}}" wx:key="index">
+      <navigator url="{{item.url}}" open-type="switchTab">
+        <image src="{{item.image_src}}" mode="aspectFill"></image>
+      </navigator>
+    </block>
+  </view>
+  <!-- 楼层 -->
+  <view class="floor" wx:for="{{floors}}" wx:key="index">
+      <view class="floor-title"> 
+         <image mode="aspectFill" src="{{item.floor_title.image_src}}" class="title-image" ></image>
+      </view>
+      <view class="floor-content">
+        <view class="floor-left"> 
+           <image src="{{item.product_list[0].image_src}}"></image>
+         </view>
+        <view class="floor-right">  
+          <block wx:for="{{item.product_list}}" 
+          wx:key="index" wx:if="{{index > 0}}">
+              <image mode="aspectFill" src="{{item.image_src}}"></image>
+          </block>
+        </view>
+      </view>
+  </view>
+  <!-- 回到顶部 -->
+  <view class="toTop" wx:if="{{isTop}}" bindtap="tohead"> 
+      <view class="arrow"></view> 
+      <text>顶部</text>
+  </view>
 </view>
