@@ -1,2 +1,4 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml123123</text>
+<view class="container">
+ <!-- 引入搜索框组件 -->
+   <search />
+</view>
