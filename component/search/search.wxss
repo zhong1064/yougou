@@ -1,5 +1,5 @@
 /* component/search/search.wxss */
-.search {
+.search {  
   padding: 20rpx;
   background-color: #ff2d4a
   

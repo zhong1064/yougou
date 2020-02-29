@@ -1,1 +1,62 @@
-/* pages/category/index.wxss */
+.content {
+  position: fixed;
+  top:98rpx;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  
+   width: 200rpx;
+   height: 100%;
+   background-color: #eee;
+   overflow: auto;
+   flex-shrink: 0;
+}
+.left-item {
+  position: relative;
+ padding: 20rpx 0;
+  text-align: center;
+}
+.active {
+  background: #fff;
+  color:red
+}
+.active::before{
+  display: block;
+  content: '';
+  position: absolute;
+  left:0;
+  top:50%;
+  width: 3px;
+  height: 16px;
+  background: red;
+  transform: translateY(-8px)
+}
+.right {
+  overflow: auto;
+  width: 520rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+ 
+}
+.brand-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.title {
+  text-align: center;
+}
+.brand-a {
+  width: 33.33%;
+  font-size: 14px;
+  text-align: center
+}
+.img {
+  box-sizing: border-box;
+  padding: 15rpx;
+  width: 100%;
+  
+}
