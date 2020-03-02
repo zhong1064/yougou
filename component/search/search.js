@@ -7,7 +7,11 @@ Component({
 
   externalClasses: ['background'],
   properties: {
-
+    //组件传值
+    keyword: { // 属性名
+      type: String,
+      value: '搜索'
+    },
   },
 
   /**

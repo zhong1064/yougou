@@ -4,26 +4,24 @@
   <view class="content">
     <!-- 左侧列表 -->
     <view class="left">
-      <view class="left-item {{current === index?'active':''}} " 
-      wx:for="{{category}}"  wx:key="index" bindtap="handClick" 
-       data-index="{{index}}"> {{item.cat_name}} </view>
+      <view class="left-item {{current === index?'active':''}} " wx:for="{{category}}" wx:key="index" bindtap="handClick" data-index="{{index}}"> {{item.cat_name}} </view>
     </view>
 
     <!-- 右侧品牌展示栏 -->
-  <block wx:for="{{category[current].children}}" wx:key="index"> 
-       <view class="right">
-      <view class="title">
-        <text> / {{item.cat_name}} /</text>
+    <block wx:for="{{category[current].children}}" wx:key="index">
+      <view class="right">
+        <view class="title">
+          <text> / {{item.cat_name}} /</text>
+        </view>
+        <view class="brand-content">
+          <block wx:for="{{item.children}}" wx:key="index">
+            <navigator url="/pages/goodlist/index?keyword={{item.cat_name}}"                       class="brand-a">
+              <image src="{{item.cat_icon}}" class="img" mode="widthFix"></image>
+              <text>{{item.cat_name}} </text>
+            </navigator>
+          </block>
+        </view>
       </view>
-      <view class="brand-content">
-        <block wx:for="{{item.children}}" wx:key="index">
-          <navigator url="" class="brand-a">
-            <image src="{{item.cat_icon}}" class="img" mode="widthFix"></image>
-            <text>{{item.cat_name}} </text>
-          </navigator>
-        </block>
-      </view>
-    </view>
-  </block>
+    </block>
   </view>
 </view>
