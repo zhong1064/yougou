@@ -1,0 +1,34 @@
+/* pages/search/index.wxss */
+.search {
+  padding: 30rpx 20rpx;
+  background: #eee;
+}
+.section {
+  display: flex;
+ justify-content: space-between;
+  align-items: center;
+}
+.search-input {
+  display: flex;
+  background: #fff;
+  align-items: center;
+  width: 540rpx;
+  height: 80rpx;
+  border-radius: 5px;
+}
+
+.btn {
+ color: #999;
+ border: 1px solid #ccc;
+ background: #eee;
+ 
+}
+.history {
+  padding: 30rpx 20rpx;
+}
+.title {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+}

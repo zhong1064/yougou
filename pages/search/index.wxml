@@ -1,0 +1,26 @@
+<!--pages/search/index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <form bindsubmit="formSubmit">
+      <view class="section">
+        <view class="search-input">
+          <icon type="search"></icon>
+          <input name="input" placeholder="请输入你想要的商品" />
+        </view>
+        <button formType="submit" class="btn" size="mini">发送</button>
+      </view>
+    </form>
+  </view>
+  <!-- 搜索历史 -->
+  <view class="history">
+     <view class="title">
+       <text>历史搜索</text> 
+       <icon type="clear" size="28" ></icon>
+     </view>
+     <view class="content">
+        
+     </view>
+  </view>
+
+</view>

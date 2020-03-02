@@ -1,0 +1,18 @@
+<!--pages/goodlist/index.wxml-->
+<view class="container">
+  <!-- 搜索栏 -->
+  <search background="bg" />
+  <!-- 中间头部tab栏 -->
+  <view class="tablist">
+    <view wx:for="{{['综合','销量','价格']}}" wx:key="index">{{item}}
+      <text wx:if="{{index === 2}}" class="iconfont iconpaixu"></text> </view>
+  </view>
+   <!-- 品牌列表 -->
+   <view class="goods">
+       <image src="../../images/good.png" class="good-img"></image>
+       <view class="goods-right"> 
+          <view class="good-right-text">今天重新研究了一下flex布局发现了一个一直没有理解透而忽略的问题~align-content属性和align-items属性的作</view>
+           <view class="price"> <text>￥</text>99.00 </view>
+       </view>
+   </view>
+</view>

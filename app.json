@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/category/index",
     "pages/cart/index",
-    "pages/personal/index"
+    "pages/personal/index",
+    "pages/search/index",
+    "pages/goodlist/index"
    
   ],
   "window": {

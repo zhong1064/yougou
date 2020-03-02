@@ -1,5 +1,5 @@
 <!-- 搜索框部分 -->
-  <navigator url="" class="search">
+  <navigator url="" class="search background">
     <view class="search-input">
       <icon type="search" size="16" />搜索
     </view>

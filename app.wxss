@@ -1,1 +1,2 @@
-@import 'commen/style.wxss'
+@import 'commen/style.wxss';
+@import 'commen/ico.wxss'

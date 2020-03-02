@@ -1,0 +1,51 @@
+/* pages/goodlist/index.wxss */
+
+.bg {
+  background: #eee !important;
+}
+
+.bg view {
+  justify-content: flex-start !important;
+}
+
+.tablist {
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  align-items: center;
+  padding-left: 40rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.tablist view {
+  padding: 70rpx;
+}
+
+.goods {
+  height: 100%;
+  display: flex;
+  padding: 20rpx;
+}
+
+.good-img {
+  width: 200rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.good-right-text {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.price {
+  margin-top: 80rpx;
+  color:red;
+  font-size: 20px;
+}
+.price text {
+  font-size: 12px;
+}
