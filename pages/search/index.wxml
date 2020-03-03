@@ -2,25 +2,36 @@
 <view class="container">
   <!-- 搜索框 -->
   <view class="search">
-    <form bindsubmit="formSubmit">
-      <view class="section">
-        <view class="search-input">
-          <icon type="search"></icon>
-          <input name="input" placeholder="请输入你想要的商品" />
-        </view>
-        <button formType="submit" class="btn" size="mini">发送</button>
+    <view class="section">
+      <view class="search-input">
+        <icon type="search"></icon>
+        <input value="" bindinput="eventhandle">
+        </input>
+
       </view>
-    </form>
+      <view class="canle-btn" wx:if="{{inputValue}}">取消</view>
+      <!-- 搜索建议列表 -->
+      <view class="recomend" wx:if="{{recomend.length}}">
+        <navigator url="" wx:for="{{recomend}}" wx:key="index">
+          {{item.goods_name}}
+        </navigator>
+      </view>
+    </view>
+
   </view>
   <!-- 搜索历史 -->
   <view class="history">
-     <view class="title">
-       <text>历史搜索</text> 
-       <icon type="clear" size="28" ></icon>
-     </view>
-     <view class="content">
-        
-     </view>
+    <view class="title">
+      <text>历史搜索</text>
+      <icon type="clear" size="28"></icon>
+    </view>
+    <view class="content">
+      <view class="his-item">小米1</view>
+      <view class="his-item">小米123</view>
+      <view class="his-item">小米13435</view>
+      <view class="his-item">小米13454</view>
+      <view class="his-item">小米154654</view>
+    </view>
   </view>
 
 </view>

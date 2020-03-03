@@ -1,27 +1,33 @@
 /* pages/search/index.wxss */
 .search {
-  padding: 30rpx 20rpx;
+  position: relative;
+  padding: 30rpx 10rpx;
   background: #eee;
 }
 .section {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
+  
 }
 .search-input {
+ 
   display: flex;
   background: #fff;
   align-items: center;
   width: 540rpx;
-  height: 80rpx;
+  height: 60rpx;
   border-radius: 5px;
 }
 
-.btn {
- color: #999;
- border: 1px solid #ccc;
- background: #eee;
- 
+.canle-btn {
+  height: 60rpx;
+  width: 158rpx;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 60rpx;
+  text-align: center;
+   
 }
 .history {
   padding: 30rpx 20rpx;
@@ -31,4 +37,35 @@
   font-size: 20px;
   justify-content: space-between;
   align-items: center;
+}
+.recomend {
+  position: absolute;
+  top:120rpx;
+  left:0;
+  width: 540rpx;
+  height: 50vh;
+  overflow: auto;
+  background: #fff;
+  padding: 20rpx;
+  border: 1px solid #ccc;
+  
+}
+.recomend navigator {
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 2
+}
+.content {
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.his-item {
+  height: 60rpx;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+  border:1px solid #ccc;
+  background: #ccc;
+  margin: 10rpx 20rpx 0 10rpx;
 }

@@ -1,10 +1,12 @@
 .content {
-  position: fixed;
+  
+  position: absolute;
   top:100rpx;
   bottom: 0;
   display: flex;
   justify-content: space-between;
 }
+/* 在苹果手机下，需要把固定定位改绝对定位，防止搜索框拖动 */
 .left {
   
    width: 200rpx;
@@ -34,6 +36,7 @@
   transform: translateY(-8px)
 }
 .right {
+  height: 100%;
   overflow: auto;
   width: 520rpx;
   margin-left: 20rpx;
