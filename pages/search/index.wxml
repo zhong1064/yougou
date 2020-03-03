@@ -5,11 +5,12 @@
     <view class="section">
       <view class="search-input">
         <icon type="search"></icon>
-        <input value="" bindinput="eventhandle">
+        <input value="{{inputValue}}" bindinput="eventhandle" 
+        bindconfirm="handEnter">
         </input>
 
       </view>
-      <view class="canle-btn" wx:if="{{inputValue}}">取消</view>
+      <view class="canle-btn" wx:if="{{inputValue}}" bindtap="handCanle">取消</view>
       <!-- 搜索建议列表 -->
       <view class="recomend" wx:if="{{recomend.length}}">
         <navigator url="" wx:for="{{recomend}}" wx:key="index">
@@ -26,11 +27,9 @@
       <icon type="clear" size="28"></icon>
     </view>
     <view class="content">
-      <view class="his-item">小米1</view>
-      <view class="his-item">小米123</view>
-      <view class="his-item">小米13435</view>
-      <view class="his-item">小米13454</view>
-      <view class="his-item">小米154654</view>
+      <navigator url="" class="his-item" wx:for="{{history}}" wx:key="index">
+         {{item}}
+      </navigator>
     </view>
   </view>
 

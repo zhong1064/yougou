@@ -62,10 +62,7 @@
 
 }
 .his-item {
-  height: 60rpx;
-  padding: 0 20rpx;
-  line-height: 60rpx;
-  border:1px solid #ccc;
-  background: #ccc;
-  margin: 10rpx 20rpx 0 10rpx;
+ padding: 5px 20px;
+background: #eee;
+margin: 0 0 20rpx 20rpx;
 }
