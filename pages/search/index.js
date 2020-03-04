@@ -95,8 +95,12 @@ Page({
     }
     //添加到数组最后一位
     arr.unshift(this.data.inputValue)
+    //数组去重 
+    arr = [...new Set(arr)]
     //把搜索的关键字保存到本地
     wx.setStorageSync('history', arr)
+    
+
     //跳转到商品列表页
     wx.redirectTo({
       url: '/pages/goodlist/index?keyword=' + this.data.inputValue
