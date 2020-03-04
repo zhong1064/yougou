@@ -6,17 +6,20 @@
       <view class="search-input">
         <icon type="search"></icon>
         <input value="{{inputValue}}" bindinput="eventhandle" 
-        bindconfirm="handEnter">
+        bindconfirm="handEnter" 
+        bindblur="handBlur">
         </input>
 
       </view>
       <view class="canle-btn" wx:if="{{inputValue}}" bindtap="handCanle">取消</view>
       <!-- 搜索建议列表 -->
       <view class="recomend" wx:if="{{recomend.length}}">
-        <navigator url="" wx:for="{{recomend}}" wx:key="index">
+        <navigator url="/pages/goodlist/index?keyword={{inputValue}}" 
+         wx:for="{{recomend}}" wx:key="index">
           {{item.goods_name}}
         </navigator>
-      </view>
+      </view> 
+
     </view>
 
   </view>
@@ -24,7 +27,7 @@
   <view class="history">
     <view class="title">
       <text>历史搜索</text>
-      <icon type="clear" size="28"></icon>
+      <icon type="clear" size="28" bindtap="clearHand"></icon>
     </view>
     <view class="content">
       <navigator url="" class="his-item" wx:for="{{history}}" wx:key="index">

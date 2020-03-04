@@ -102,6 +102,20 @@ Page({
       url: '/pages/goodlist/index?keyword=' + this.data.inputValue
     })
   },
+
+  //点击取消按钮触发的事件
+  clearHand(){
+    wx.setStorageSync('history', [])
+    this.setData({
+      history:[]
+    })
+  },
+  //输入框失焦触发的事件
+  handBlur(){
+     this.setData({
+       recomend:[]
+     })
+  },
   /**
    * 页面上拉触底事件的处理函数
    */
