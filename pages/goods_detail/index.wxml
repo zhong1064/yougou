@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 轮播图 -->
+  <view >
+    <swiper indicator-dots class="swiper">
+      <block wx:for="{{detail.pics}}" wx:key="index">
+        <swiper-item >
+          <image class='img' mode="aspectFill" 
+          src="{{item.pics_big}}" bindtap="handleImg" 
+          data-imgIndex="{{index}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 产品信息 --> 
+  <view class="wrap">
+    <view class="price">￥{{detail.goods_price}} </view> 
+    <view class="wrap-content">
+       <view class="wrap-info">{{detail.goods_name}} </view>
+       <view class="wrap-item">
+          <text class="iconfont icon-shoucang"></text>
+          <text>收藏</text>
+       </view>
+    </view>
+     <view class="send">快递: 免运费</view>
+  </view>
+  <!-- 商品详细信息的展示 --> 
+  <view class="tab">
+     <view class="tab-item {{current === index?'active':''}}"  
+    
+     wx:for="{{['详情','规格']}}"
+     wx:key="index" bindtap="handleTab" 
+     data-index="{{index}}">{{item}} </view>
+  </view>
+  <!-- 商品详情 -->
+  <rich-text wx:if="{{current === 0}}" 
+  nodes="{{detail.goods_introduce}}"></rich-text>
+  <!-- 商品规格 --> 
+  <view wx:if="{{current === 1}}" class="attrs">
+     <view class="attr-item"
+     wx:for="{{detail.attrs}}"
+     wx:key="index">
+     <text>{{item.attr_name}} </text>
+     <text>{{item.attr_vals}} </text>
+     </view>
+  </view>
+  <!-- 底部栏 -->
+  <view class="foot">
+     <view class="cantat"> <text class="iconfont icon-kefu"></text> 
+      <text>联系客服</text>
+      </view>
+      <view class="kefu"><button open-type="contact"></button> </view>
+      <view class="cantat"> 
+       <text class="iconfont iconicon-test"></text>
+       <text>购物车</text>
+      </view>
+      <view class="btn">加入购物车</view>
+       <view class="btn">立即购买</view>
+  </view>
+</view>

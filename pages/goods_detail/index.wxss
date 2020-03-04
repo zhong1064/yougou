@@ -1,0 +1,114 @@
+/* pages/goods_detail/index.wxss */
+.swiper {
+  width: 750rpx;
+  height: 750rpx;
+}
+.img{
+  width: 750rpx;
+  height: 750rpx;
+}
+.wrap {
+  padding: 20rpx;
+}
+.price {
+  font-size: 20px;
+  color:red;
+  margin-bottom: 20rpx;
+}
+.wrap-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap-info {
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+.wrap-item {
+  width: 120rpx;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  border-left: 1px solid #ccc;
+  color:#999;
+}
+.send {
+  margin-top: 20rpx;
+  color:#999;
+}
+.foot {
+  width: 100%;
+  position: fixed;
+  bottom: 0;left: 0;
+  display: flex;
+  justify-content: center;
+  height: 100rpx;
+  box-shadow: 0 -2px 2px #eee;
+  background: #fff;
+  
+}
+.cantat {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+}
+.cantat .iconfont {
+  font-size: 26px;
+}
+.btn {
+  width: 30%;
+  line-height: 100rpx;
+  text-align: center;
+  background: orange;
+  color: #fff;
+}
+.btn:last-child {
+  background: red;
+}
+.tab {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  line-height: 80rpx;
+  padding-top: 10px;
+  border-top:10px solid #999;
+}
+.tab-item {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+ 
+  
+}
+
+.active {
+  background: red;
+}
+.attrs {
+  height: 500rpx;
+  padding: 20rpx;
+}
+.attr-item {
+  padding: 10rpx 0;
+}
+.kefu {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left:0;
+  bottom: 0;
+  opacity: 0;
+}
+.kefu button {
+  width: 100%;
+  height: 100%;
+}

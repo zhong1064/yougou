@@ -1,5 +1,5 @@
 <!--pages/search/index.wxml-->
-<view class="container">
+<view class="container" bindtap="handShowlist">
   <!-- 搜索框 -->
   <view class="search">
     <view class="section">
@@ -15,7 +15,8 @@
       <!-- 搜索建议列表 -->
       <view class="recomend" wx:if="{{recomend.length}}">
         <navigator url="/pages/goodlist/index?keyword={{inputValue}}" 
-         wx:for="{{recomend}}" wx:key="index">
+         wx:for="{{recomend}}" wx:key="index" 
+         data-onlyid="{{item.goods_id}}">
           {{item.goods_name}}
         </navigator>
       </view> 

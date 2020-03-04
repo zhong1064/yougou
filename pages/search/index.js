@@ -120,17 +120,8 @@ Page({
        recomend:[]
      })
   },
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 点击判断是否是浮层的事件
+  handShowlist(e){
+    //  console.log(e)
   }
 })

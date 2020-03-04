@@ -5,13 +5,14 @@
     "pages/cart/index",
     "pages/personal/index",
     "pages/search/index",
-    "pages/goodlist/index"
+    "pages/goodlist/index",
+    "pages/goods_detail/index"
    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff2d4a",
-    "navigationBarTitleText": "黑马优购",
+    "navigationBarTitleText": "商品详情",
     "navigationBarTextStyle": "white"
   },
   "tabBar":{
