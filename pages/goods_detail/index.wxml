@@ -53,7 +53,7 @@
        <text class="iconfont iconicon-test"></text>
        <text>购物车</text>
       </view>
-      <view class="btn">加入购物车</view>
+      <view class="btn" bindtap="handleCart">加入购物车</view>
        <view class="btn">立即购买</view>
   </view>
 </view>

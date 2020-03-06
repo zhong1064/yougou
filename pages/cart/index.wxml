@@ -1,2 +1,40 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="container">
+  <!-- 收货信息  -->
+  <view class="header">
+    <view class="header-title">
+      <view class="header-left">
+        收货人：苏
+      </view>
+      <view class="header-right">
+        <text> 13535337057</text>
+      </view>
+    </view>
+    <view class="header-address">收货地址：江西省新余市分宜县 </view>
+    <image src="../../images/cart_border@2x.png" class="header-img"></image>
+  </view>
+  <!-- 品牌列表 -->
+  <view class="goods">
+    <view class="goods-title">
+      <text class="iconfont icon-dianpu"></text>优购生活馆
+    </view>
+    <view class="goods-item">
+      <view class="goods-left">
+        <icon type="success" color="red"></icon>
+        <image  mode="aspectFill"     src="https://img10.360buyimg.com/pop/s1180x940_jfs/t1/96750/19/13588/49315/5e5e6d50E7d324b53/489f9f45848d3cbd.jpg.webp"></image>
+      </view>
+      <view class="good-right">
+        <view class="goods-info">判断小程序的API，回调，参数，组件等是否在当前版本可用              </view>
+        <view class="goods-content">
+          <view class="goods-price"> 
+             <text>￥</text>279.00
+          </view>
+          <view class="goods-number">
+             <view class="goods-btn">-</view> 
+             <input></input> 
+             <view class="goods-btn">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
