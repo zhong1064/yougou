@@ -12,8 +12,9 @@ Page({
       name:'',
       tel:'',
       detail:''
-
-     }
+     },
+     //总价
+     allPrice:0
   },
 
   /**
@@ -30,7 +31,9 @@ Page({
   onShow(){
      this.setData({
        goodList: wx.getStorageSync('goods') || []
-     })
+     }),
+     //计算总价
+     this.calcPrice()
   },
 
   //点击获取地址信息
@@ -50,5 +53,47 @@ Page({
     })
   },
 
- 
+ // 计算总价
+ calcPrice(){
+   let price = 0
+   this.data.goodList.forEach(v => {
+     price += (v.goods_price * v.number)
+   })
+   this.setData({
+     allPrice: price
+   })
+   //存入本地
+   wx.setStorageSync('goods',this.data.goodList)
+ },
+ //点击加减数量
+ handleAdd(e){
+   const {index,number} = e.target.dataset
+   this.data.goodList[index].number += number 
+   //判断当输入框的值是0的时候提示用户是否删除商品
+   if(this.data.goodList[index].number == 0){
+     wx.showModal({
+       title: '提示',
+       content: '是否删除商品',
+       success:(res) => {
+         if (res.confirm) {
+              //删除商品
+              this.data.goodList.splice(index,1)
+         } else if (res.cancel) {
+           this.data.goodList[index].number += 1
+         }
+         //重新修改data里面的值
+         this.setData({
+           goodList: this.data.goodList
+         })
+       }
+     })
+    
+   }
+   //重新修改data里面的值
+   this.setData({
+     goodList: this.data.goodList
+   })
+   //计算总价格
+   this.calcPrice()
+ }
 })

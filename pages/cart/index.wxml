@@ -40,9 +40,12 @@
              <text>￥</text> {{item.goods_price}}
           </view>
           <view class="goods-number">
-             <view class="goods-btn">-</view> 
+             <view class="goods-btn" bindtap="handleAdd" 
+             data-index="{{index}}" data-number="{{-1}}" >-</view> 
              <input value="{{item.number}}"></input> 
-             <view class="goods-btn">+</view>
+             <view class="goods-btn" 
+             bindtap="handleAdd" data-index="{{index}}"
+             data-number="{{1}}">+</view>
           </view>
         </view>
       </view>
@@ -57,7 +60,7 @@
      </view>
      <view class="allPrice"> 
         <view class="price-top"> 
-            合计：<text class="price-sym">￥</text><text>14110.00</text>
+            合计：<text class="price-sym">￥</text><text>{{allPrice}} </text>
         </view>
         <view class="cost">包含运费</view>
      </view>
