@@ -107,8 +107,12 @@ overflow: hidden;
   left:0;
   bottom: 0;
   opacity: 0;
+  overflow: hidden;
 }
 .kefu button {
-  width: 100%;
-  height: 100%;
+  height: 100rpx;
 }
+.rich {
+  margin-bottom: 50rpx;
+}
+ 

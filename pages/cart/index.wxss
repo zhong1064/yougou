@@ -38,9 +38,13 @@
 .goods-title text {
   margin-right: 10px;
 }
+.goods {
+  margin-bottom: 120rpx;
+}
 .goods-item {
   display: flex;
   padding: 20rpx;
+  border-bottom: 1px solid #ccc;
 }
 .goods-left {
   display: flex; 
@@ -54,4 +58,76 @@
 }
 .goods-left icon {
   margin-right: 20rpx;
+}
+.good-right {
+  width: 100%;
+   padding: 20rpx;
+}
+.goods-info {
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.goods-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+.goods-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.goods-btn {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 16px;
+}
+.goods-number input {
+  width: 30px;
+}
+.checkout {
+  margin-top: 100rpx;
+  border-top: 20rpx solid #ccc;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.checkall {
+  display: flex;
+  margin-left: 20rpx;
+
+}
+.checkall icon {
+  margin-right: 20rpx;
+}
+.allPrice {
+  flex: 1;
+  margin-left: 80rpx;
+}
+.price-top text {
+  color: red;
+}
+.cost {
+  color:#999;
+  font-size: 14px;
+}
+.calc-btn {
+  width: 30%;
+  background: #eb4450;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

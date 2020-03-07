@@ -52,11 +52,47 @@ Page({
       urls: this.data.urls // 需要预览的图片http链接列表
     })
   },
-  // 点击加入购物车,跳转购物车页
-  handleCart(){
+  // 点击购物车,跳转购物车页
+  handleToCart(){
     wx.switchTab({
       url: '/pages/cart/index'
     })
+  },
+  // 把商品加入到本地购物列表
+  handleAddCart(){
+      // 需要先判断本地是否有数据
+    const goods = wx.getStorageSync('goods') || [] 
+    //用some方发判断goods数组中是否包含目前点击的产品，如果包含，产品的数量加1
+  let result =  goods.some(v => {
+      let isExit = v.goods_id === this.data.detail.goods_id
+      if(isExit){
+        v.number +=1
+        //给出提示
+        wx.showToast({
+          title: '数量+1',
+          icon: 'success',
+        })
+      } 
+      return isExit
+    })
+    //当在本地没有相同的数据时，直接存入本地数组
+    if(!result){
+      goods.unshift({
+        goods_id: this.data.detail.goods_id,
+        goods_name: this.data.detail.goods_name,
+        goods_price: this.data.detail.goods_price,
+        goods_small_logo: this.data.detail.goods_small_logo,
+        number: 1
+      })
+      //给出提示
+      wx.showToast({
+        title: '加入成功',
+        icon: 'success',
+      })
+    }
+    // 存入本地
+    wx.setStorageSync('goods', goods)
+
   }
  
  

@@ -1,40 +1,68 @@
 <view class="container">
   <!-- 收货信息  -->
-  <view class="header">
+  <view class="header" wx:if="{{address.name}}">
     <view class="header-title">
       <view class="header-left">
-        收货人：苏
+        收货人：{{address.name}}
       </view>
       <view class="header-right">
-        <text> 13535337057</text>
+        <text>{{address.tel}} </text>
       </view>
     </view>
-    <view class="header-address">收货地址：江西省新余市分宜县 </view>
+    <view class="header-address">收货地址：{{address.detail}} </view>
+    <image src="../../images/cart_border@2x.png" class="header-img"></image>
+  </view> 
+ <!-- 获取本地数据 --> 
+ <view class="header" wx:if="{{!address.name}}" bindtap="handleGetaddress">
+    <view class="header-title">
+       获取地址信息
+    </view>
+    
     <image src="../../images/cart_border@2x.png" class="header-img"></image>
   </view>
+  
   <!-- 品牌列表 -->
   <view class="goods">
     <view class="goods-title">
       <text class="iconfont icon-dianpu"></text>优购生活馆
     </view>
-    <view class="goods-item">
+    <view class="goods-item" wx:for="{{goodList}}" wx:key="index">
       <view class="goods-left">
         <icon type="success" color="red"></icon>
-        <image  mode="aspectFill"     src="https://img10.360buyimg.com/pop/s1180x940_jfs/t1/96750/19/13588/49315/5e5e6d50E7d324b53/489f9f45848d3cbd.jpg.webp"></image>
+         <navigator url="/pages/goods_detail/index?id={{item.goods_id}}">
+            <image  mode="aspectFill" src="{{item.goods_small_logo}}"></image>
+         </navigator>
       </view>
       <view class="good-right">
-        <view class="goods-info">判断小程序的API，回调，参数，组件等是否在当前版本可用              </view>
+        <view class="goods-info"> {{item.goods_name}} </view>
         <view class="goods-content">
           <view class="goods-price"> 
-             <text>￥</text>279.00
+             <text>￥</text> {{item.goods_price}}
           </view>
           <view class="goods-number">
              <view class="goods-btn">-</view> 
-             <input></input> 
+             <input value="{{item.number}}"></input> 
              <view class="goods-btn">+</view>
           </view>
         </view>
       </view>
     </view>
+  </view>
+
+  <!-- 总价结算 -->
+  <view class="checkout"> 
+     <view class="checkall"> 
+         <icon type="success" color="red"></icon> 
+         全选
+     </view>
+     <view class="allPrice"> 
+        <view class="price-top"> 
+            合计：<text class="price-sym">￥</text><text>14110.00</text>
+        </view>
+        <view class="cost">包含运费</view>
+     </view>
+     <view class="calc-btn"> 
+        结算
+     </view>
   </view>
 </view>

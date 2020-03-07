@@ -21,7 +21,8 @@
   padding: 70rpx;
 }
 
-.goods {
+
+.good {
   height: 100%;
   display: flex;
   padding: 20rpx;

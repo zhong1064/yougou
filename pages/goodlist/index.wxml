@@ -8,10 +8,10 @@
       <text wx:if="{{index === 2}}" class="iconfont iconpaixu"></text> </view>
   </view>
    <!-- 品牌列表 -->
-   <view class="goods" wx:for="{{goods}}" wx:key="index">
-       <navigator url="/pages/goods_detail/index?keyword={{item.goods_id}}">  
+   <view  wx:for="{{goods}}" wx:key="index">
+       <navigator url="/pages/goods_detail/index?keyword={{item.goods_id}}"    class="good">  
           <image src="{{item.goods_small_logo}}" class="good-img"></image>
-       <view class="goods-right"> 
+       <view class="good-right"> 
           <view class="good-right-text">{{item.goods_name}} </view>
            <view class="price"> <text>￥</text> {{item.goods_price}} </view>
        </view>
