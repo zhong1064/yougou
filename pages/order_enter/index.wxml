@@ -28,9 +28,7 @@
     </view>
     <view class="goods-item" wx:for="{{goodList}}" wx:key="index">
       <view class="goods-left">
-        <icon type="success" color="{{item.select?'red':'gray'}}"
-        bindtap="handleSelect" 
-        data-index="{{index}}"></icon>
+        <icon type="success" color="red"></icon>
          <navigator url="/pages/goods_detail/index?id={{item.goods_id}}">
             <image  mode="aspectFill" src="{{item.goods_small_logo}}"></image>
          </navigator>
@@ -41,15 +39,7 @@
           <view class="goods-price"> 
              <text>￥</text> {{item.goods_price}}
           </view>
-          <view class="goods-number">
-             <view class="goods-btn" bindtap="handleAdd" 
-             data-index="{{index}}" data-number="{{-1}}" >-</view> 
-             <input value="{{item.number}}" bindblur="handBlur" 
-             data-index="{{index}}"></input> 
-             <view class="goods-btn" 
-             bindtap="handleAdd" data-index="{{index}}"
-             data-number="{{1}}">+</view>
-          </view>
+       
         </view>
       </view>
     </view>
@@ -58,8 +48,7 @@
   <!-- 总价结算 -->
   <view class="checkout"> 
      <view class="checkall"> 
-         <icon type="success" color="{{allSelect?'red':'gray'}}"  
-         bindtap="handleTabAllselect"></icon> 
+         <icon type="success" color="red"></icon> 
          全选
      </view>
      <view class="allPrice"> 

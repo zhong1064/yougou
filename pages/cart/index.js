@@ -14,7 +14,9 @@ Page({
       detail: ''
     },
     //总价
-    allPrice: 0
+    allPrice: 0,
+    //全选的状态
+    allSelect:true
   },
 
   /**
@@ -38,7 +40,8 @@ Page({
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
-        selected: 2
+        selected: 2,
+        cartCount: (wx.getStorageSync('goods') || []).length
       })
     }
   },
@@ -64,7 +67,10 @@ Page({
   calcPrice() {
     let price = 0
     this.data.goodList.forEach(v => {
-      price += (v.goods_price * v.number)
+      if(v.select){
+        price += (v.goods_price * v.number)
+      }
+     
     })
     this.setData({
       allPrice: price
@@ -107,6 +113,64 @@ Page({
     //计算总价格
     this.calcPrice()
   },
- 
+ // 点击单选按钮修改选中状态
+  handleSelect(e){
+    //点击的产品索引
+    const {index} = e.target.dataset 
+    
+    // 点击产品的选中状态
+    let {select} = this.data.goodList[index] 
+    
+    //取反选中产品的状态
+    this.data.goodList[index].select = !select 
+    //修改data里面的值
+    this.setData({
+      goodList:this.data.goodList
+    })
+
+    //计算总价
+    this.calcPrice()
+    //判断全选状态
+    this.handAllselect()
+  },
+  //判断全选的状态
+ handAllselect(){
+   let newSelect =  this.data.goodList.some( v => {
+     return !v.select
+    })
+   this.setData({
+     allSelect: !newSelect
+   })
+  },
+  //点击全选按钮，做出全选和全不选
+  handleTabAllselect(){
+    const {allSelect} = this.data 
+    //循环修改状态
+    this.data.goodList.forEach( v => {
+      v.select = !allSelect
+    })
+    //修改data中的数据
+    this.setData({
+      allSelect:!allSelect,
+      goodList:this.data.goodList
+    })
+    this.calcPrice()
+  },
+  //输入框失焦事件
+  handBlur(e){
+   //获取当前点击的商品和输入框的值
+   const {index} = e.target.dataset
+   let {value} = e.detail
+   value = Math.floor(Number(value))
+   if(value < 1){
+     value = 1
+   }
+   this.data.goodList[index].number = value 
+   this.setData({
+     goodList:this.data.goodList
+   })
+   this.calcPrice()
+  }
+
 
 })

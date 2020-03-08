@@ -6,7 +6,8 @@
     "pages/personal/index",
     "pages/search/index",
     "pages/goodlist/index",
-    "pages/goods_detail/index"
+    "pages/goods_detail/index",
+    "pages/order_enter/index"
    
   ],
   "window": {
