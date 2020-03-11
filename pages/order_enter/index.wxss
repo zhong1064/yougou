@@ -48,9 +48,7 @@
   width: 160rpx;
   flex-shrink: 0;
 }
-.goods-left icon {
-  margin-right: 20rpx;
-}
+
 .good-right {
   width: 100%;
    padding: 20rpx;
@@ -67,54 +65,10 @@
   margin-top: 40rpx;
 }
 
-.goods-btn {
-  position: relative;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #999;
-  text-align: center;
-  line-height: 20px;
+.order-info {
+  padding: 20rpx;
+}
+.pay-button {
+  width: 700rpx!important;
 }
 
-.checkout {
-  
-  border-top: 20rpx solid #ccc;
-  background: #fff;
-  position: fixed;
-  bottom: 90rpx;
-  left:0;
-  height: 100rpx;
-  width: 750rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-}
-.checkall {
-  display: flex;
-  margin-left: 20rpx;
-
-}
-.checkall icon {
-  margin-right: 20rpx;
-}
-.allPrice {
-  flex: 1;
-  margin-left: 80rpx;
-}
-.price-top text {
-  color: red;
-}
-.cost {
-  color:#999;
-  font-size: 14px;
-}
-.calc-btn {
-  width: 30%;
-  background: #eb4450;
-  height:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

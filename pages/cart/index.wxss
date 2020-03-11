@@ -104,7 +104,7 @@
   border-top: 20rpx solid #ccc;
   background: #fff;
   position: fixed;
-  bottom: 90rpx;
+  bottom: 115rpx;
   left:0;
   height: 100rpx;
   width: 750rpx;

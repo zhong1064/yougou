@@ -1,1 +1,71 @@
 /* pages/personal/index.wxss */
+page {
+  background: #f4f4f4;
+}
+.user-info {
+  height: 420rpx;
+  background: #ff2d4a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avert {
+  width: 120rpx;
+  height: 120rpx;
+  border:2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+ 
+}
+.user-avert {
+  margin: 0 30rpx;
+  color:#fff;
+}
+.ico {
+  color:#fff;
+  font-size: 16px;
+  margin-top: -10px;
+}
+.collect {
+  height: 120rpx;
+  background: #fff;
+  margin: 0 20rpx;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  position: relative;
+  bottom: 10px;
+  align-items: center;
+}
+.collect-shop {
+  text-align: center;
+  font-size: 12px;
+}
+.order {
+  height: 256rpx;
+  background: #fff;
+  margin: 20rpx;
+}
+.order-title {
+  height: 89rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20rpx;
+  line-height: 89rpx;
+}
+.order-content {
+  display: flex;
+  height: 166rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.order-item {
+  text-align: center;
+  
+}
+.order-ico {
+  color:#ff2d4a;
+  font-size: 20px;
+ 
+}

@@ -16,7 +16,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "wxd825169d3cfc9ef7",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "yougou",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -50,8 +50,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cart/index",
-					"pathName": "pages/cart/index",
+					"name": "pages/personal/index",
+					"pathName": "pages/personal/index",
 					"query": "keyword=43982",
 					"scene": null
 				}

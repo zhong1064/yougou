@@ -170,6 +170,12 @@ Page({
      goodList:this.data.goodList
    })
    this.calcPrice()
+  },
+ //点击结算按钮，跳转订单确页
+  handlecalc(){
+    wx.redirectTo({
+      url: '/pages/order_enter/index'
+    })
   }
 
 

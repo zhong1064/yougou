@@ -8,6 +8,7 @@
       <view class="header-right">
         <text>{{address.tel}} </text>
       </view>
+
     </view>
     <view class="header-address">收货地址：{{address.detail}} </view>
     <image src="../../images/cart_border@2x.png" class="header-img"></image>
@@ -68,7 +69,7 @@
         </view>
         <view class="cost">包含运费</view>
      </view>
-     <view class="calc-btn"> 
+     <view class="calc-btn" bindtap="handlecalc"> 
         结算
      </view>
   </view>

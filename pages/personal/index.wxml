@@ -1,2 +1,52 @@
-<!--pages/personal/index.wxml-->
-<text>pages/personal/index.wxml</text>
+<view class="container"> 
+   <!-- 个人信息 --> 
+   <view class="user-info">
+      <view class="iconfont icon-icon_set_up ico"></view> 
+      <view class="user-avert"> 
+        <view class="avert"><open-data type="userAvatarUrl"></open-data></view>
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="iconfont icon-dakaihuihua ico"></view>
+   </view>
+   <!-- 收藏 --> 
+   <view class="collect">
+       <view class="collect-shop">
+           <view>0</view>
+           <view>收藏的店铺</view>
+       </view>
+        <view class="collect-shop">
+           <view>0</view>
+           <view>收藏的商品</view>
+        </view>
+        <view class="collect-shop">
+           <view>0</view>
+           <view>关注的商品</view>
+        </view>
+        <view class="collect-shop">
+           <view>0</view>
+           <view>我的足迹</view>
+        </view>
+   </view>
+    <!-- 订单 -->
+    <view class="order"> 
+        <view class="order-title">我的订单</view>
+        <view class="order-content">
+           <view class="order-item" >
+               <view class="iconfont icon-daifukuan order-ico"></view>
+               <view>待付款</view>
+           </view>
+            <view class="order-item" >
+               <view class="iconfont icon-icon3 order-ico"></view>
+               <view>待收货</view>
+           </view>
+            <view class="order-item" >
+               <view class="iconfont icon-icon5 order-ico"></view>
+               <view>退款/退货</view>
+           </view>
+            <view class="order-item" >
+               <view class="iconfont icon-icon_order order-ico"></view>
+               <view>全部订单</view>
+           </view>
+        </view>
+    </view>
+ </view>

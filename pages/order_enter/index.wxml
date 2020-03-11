@@ -11,16 +11,16 @@
     </view>
     <view class="header-address">收货地址：{{address.detail}} </view>
     <image src="../../images/cart_border@2x.png" class="header-img"></image>
-  </view> 
- <!-- 获取本地数据 --> 
- <view class="header" wx:if="{{!address.name}}" bindtap="handleGetaddress">
+  </view>
+  <!-- 获取本地数据 -->
+  <view class="header" wx:if="{{!address.name}}" bindtap="handleGetaddress">
     <view class="header-title">
-       获取地址信息
+      获取地址信息
     </view>
-    
+
     <image src="../../images/cart_border@2x.png" class="header-img"></image>
   </view>
-  
+
   <!-- 品牌列表 -->
   <view class="goods">
     <view class="goods-title">
@@ -28,37 +28,33 @@
     </view>
     <view class="goods-item" wx:for="{{goodList}}" wx:key="index">
       <view class="goods-left">
-        <icon type="success" color="red"></icon>
-         <navigator url="/pages/goods_detail/index?id={{item.goods_id}}">
-            <image  mode="aspectFill" src="{{item.goods_small_logo}}"></image>
-         </navigator>
+
+        <navigator url="/pages/goods_detail/index?id={{item.goods_id}}">
+          <image mode="aspectFill" src="{{item.goods_small_logo}}"></image>
+        </navigator>
       </view>
       <view class="good-right">
         <view class="goods-info"> {{item.goods_name}} </view>
         <view class="goods-content">
-          <view class="goods-price"> 
-             <text>￥</text> {{item.goods_price}}
+          <view class="goods-price">
+            <text>￥</text> {{item.goods_price}}
           </view>
-       
+          <!-- 新增：数量显示 -->
+          <view>
+            数量*{{item.number}}
+          </view>
         </view>
       </view>
     </view>
   </view>
 
-  <!-- 总价结算 -->
-  <view class="checkout"> 
-     <view class="checkall"> 
-         <icon type="success" color="red"></icon> 
-         全选
-     </view>
-     <view class="allPrice"> 
-        <view class="price-top"> 
-            合计：<text class="price-sym">￥</text><text>{{allPrice}} </text>
-        </view>
-        <view class="cost">包含运费</view>
-     </view>
-     <view class="calc-btn"> 
-        结算
-     </view>
-  </view>
+  <!-- 新增：合算 -->
+    <view class="order-info">
+        合算：￥{{allPrice}}
+    </view>
+
+    <!-- 新增：支付按钮 -->
+    <button type="primary" class="pay-button" width="710" bindtap="handlePay" >
+        立即支付
+    </button>
 </view>
